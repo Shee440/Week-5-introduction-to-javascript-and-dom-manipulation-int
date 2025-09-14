@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+    
+    <header>
+        <h1>JavaScript Fundamentals Project</h1>
+        <p>Mastering JavaScript Basics, Functions, Loops, and DOM Manipulation</p>
+    </header>
+    
+    <main>
+        <!-- Part 1: JavaScript Basics -->
+        <section id="part1">
+            <h2>Part 1: JavaScript Basics</h2>
+            <p>Variables, data types, operators, and conditionals</p>
+            
+            <div class="input-group">
+                <label for="userAge">Enter your age:</label>
+                <input type="number" id="userAge" placeholder="Enter your age">
+                <button onclick="checkAge()">Check Age</button>
+            </div>
+            
+            <div class="input-group">
+                <label for="num1">Enter first number:</label>
+                <input type="number" id="num1" placeholder="First number">
+                
+                <label for="num2">Enter second number:</label>
+                <input type="number" id="num2" placeholder="Second number">
+                
+                <label for="operation">Select operation:</label>
+                <select id="operation">
+                    <option value="add">Addition (+)</option>
+                    <option value="subtract">Subtraction (-)</option>
+                    <option value="multiply">Multiplication (*)</option>
+                    <option value="divide">Division (/)</option>
+                </select>
+                
+                <button onclick="calculate()">Calculate</button>
+            </div>
+            
+            <div class="output" id="output1">
+                Results will appear here...
+            </div>
+        </section>
+        
+        <!-- Part 2: JavaScript Functions -->
+        <section id="part2">
+            <h2>Part 2: JavaScript Functions</h2>
+            <p>Reusable blocks of logic for common tasks</p>
+            
+            <div class="input-group">
+                <label for="circleRadius">Enter circle radius (cm):</label>
+                <input type="number" id="circleRadius" placeholder="Radius in cm">
+                <button onclick="calculateCircleArea()">Calculate Area</button>
+            </div>
+            
+            <div class="input-group">
+                <label for="userName">Enter your name:</label>
+                <input type="text" id="userName" placeholder="Your name">
+                <button onclick="greetUser()">Greet Me</button>
+            </div>
+            
+            <div class="output" id="output2">
+                Function results will appear here...
+            </div>
+        </section>
+        
+        <!-- Part 3: JavaScript Loops -->
+        <section id="part3">
+            <h2>Part 3: JavaScript Loops</h2>
+            <p>Using loops to solve repetitive tasks</p>
+            
+            <div class="input-group">
+                <label for="loopNumber">Enter a number (1-10):</label>
+                <input type="number" id="loopNumber" min="1" max="10" value="5">
+                <button onclick="generateMultiplicationTable()">Generate Table</button>
+            </div>
+            
+            <div class="input-group">
+                <button onclick="generateColorBoxes()">Generate Color Boxes</button>
+            </div>
+            
+            <div class="output" id="output3">
+                Loop results will appear here...
+            </div>
+            
+            <div id="colorBoxContainer"></div>
+        </section>
+        
+        <!-- Part 4: DOM Manipulation -->
+        <section id="part4">
+            <h2>Part 4: DOM Manipulation</h2>
+            <p>Making the page interactive with DOM manipulation</p>
+            
+            <div class="interactive-area">
+                <div class="interactive-item">
+                    <h3>Counter</h3>
+                    <div class="counter" id="counter">0</div>
+                    <button onclick="incrementCounter()">Increment</button>
+                    <button onclick="decrementCounter()">Decrement</button>
+                    <button onclick="resetCounter()">Reset</button>
+                </div>
+                
+                <div class="interactive-item">
+                    <h3>User List</h3>
+                    <button onclick="addUser()">Add Random User</button>
+                    <button onclick="clearUsers()">Clear All Users</button>
+                    <div id="userList"></div>
+                </div>
+                
+                <div class="interactive-item">
+                    <h3>Content Toggle</h3>
+                    <button onclick="toggleContent()">Toggle Content</button>
+                    <div id="toggableContent" style="display: none; margin-top: 15px;">
+                        <p>This content was hidden and now is visible! 🎉</p>
+                        <p>DOM manipulation allows us to show, hide, and modify content on the page dynamically.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
